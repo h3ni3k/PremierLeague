@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DataResolver } from './resolvers/data.resolver';
 
 const routes: Routes = [
   {
@@ -8,6 +9,7 @@ const routes: Routes = [
       import('./components/ranking/ranking.module').then(
         (m) => m.RankingModule
       ),
+    resolve: { data: DataResolver },
   },
   {
     path: '',
