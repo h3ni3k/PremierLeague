@@ -1,0 +1,13 @@
+<div class="card border-primary mx-auto mt-4" style="width: 66.7%">
+  <h3 class="card-header">
+    {{ data.data.data.name }}
+    <blockquote class="blockquote mb-0">
+      <footer class="blockquote-footer">
+        Sezon {{ data.data.data.season }}
+      </footer>
+    </blockquote>
+  </h3>
+  <div class="card-body">
+    <app-team-list *ngIf="data" [data]="data"></app-team-list>
+  </div>
+</div>
