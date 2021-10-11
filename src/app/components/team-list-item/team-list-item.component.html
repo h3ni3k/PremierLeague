@@ -1,2 +1,51 @@
-<p>team-list-item works!</p>
-<ng-container *ngIf="data">{{ data.data.standings[0].team.name }}</ng-container>
+<div class="col mb-4">
+  <div class="card h-100">
+    <div class="card-header">
+      {{ standing!.stats[8].displayValue }}.
+      {{ standing!.team.displayName }}
+    </div>
+    <img
+      src="{{ standing!.team.logos[0].href }}"
+      alt="Team logo"
+      class="card-img-top"
+    />
+    <div class="card-body">
+      <div class="card-header">Statystyki meczów</div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-success">
+          {{ standing!.stats[0].displayName }}:
+          {{ standing!.stats[0].displayValue }}
+        </li>
+        <li class="list-group-item bg-warning">
+          {{ standing!.stats[2].displayName }}:
+          {{ standing!.stats[2].displayValue }}
+        </li>
+        <li class="list-group-item bg-danger">
+          {{ standing!.stats[1].displayName }}:
+          {{ standing!.stats[1].displayValue }}
+        </li>
+        <li class="list-group-item bg-info">
+          {{ standing!.stats[6].displayName }}:
+          {{ standing!.stats[6].displayValue }}
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="card-header">Statystyki bramek</div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item bg-success">
+          {{ standing!.stats[4].displayName }}:
+          {{ standing!.stats[4].displayValue }}
+        </li>
+        <li class="list-group-item bg-danger">
+          {{ standing!.stats[5].displayName }}:
+          {{ standing!.stats[5].displayValue }}
+        </li>
+        <li class="list-group-item bg-warning">
+          {{ standing!.stats[9].displayName }}:
+          {{ standing!.stats[9].displayValue }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -8,11 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RankingComponent implements OnInit {
   data: any;
+  team = 'Chelsea';
+  filteredByPoints = {};
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.data = this.route.snapshot.data;
 
-    console.log(this.data);
+    // console.log(this.data.data.data.standings[0].team.name);
   }
 }

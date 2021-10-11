@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ResponseBody } from '../../Types';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Standing } from '../../Types';
 
 @Component({
   selector: 'app-team-list-item',
@@ -7,11 +7,13 @@ import { ResponseBody } from '../../Types';
   styleUrls: ['./team-list-item.component.css'],
 })
 export class TeamListItemComponent implements OnInit {
-  @Input() data!: ResponseBody;
+  @Input() standing!: Standing | null;
 
   constructor() {
-    console.log(this.data);
+    // console.log(this.data);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.standing);
+  }
 }

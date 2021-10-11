@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 import { ResponseBody } from '../../Types';
 
@@ -9,9 +9,13 @@ import { ResponseBody } from '../../Types';
 })
 export class TeamListComponent implements OnInit {
   @Input() data!: ResponseBody;
+  // isLoaded: boolean = false;
+
   constructor() {
-    console.log(this.data);
+    // console.log(this.data);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // console.log(this.data.data.season);
+  }
 }
