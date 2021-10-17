@@ -14,6 +14,6 @@ export class TeamListItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // console.log(this.standing);
+    // console.log(this.standing?.stats);
   }
 }
